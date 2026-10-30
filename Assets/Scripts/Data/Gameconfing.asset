@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc44b87d18c9e64b85ec58cb7130ab2, type: 3}
+  m_Name: Gameconfing
+  m_EditorClassIdentifier: Assembly-CSharp::GameConfig
+  totalRounds: 3
+  startingCash: 1000
+  actionsPerRound: 3
+  cardsPerHand: 3
+  minPrice: 5
+  allowedQuantities: 01000000050000000a000000
+  companies:
+  - {fileID: 11400000, guid: 4dd6005277e719c41b4b766c9944648d, type: 2}
+  - {fileID: 11400000, guid: cdb98cd430b9d7c4ab501b9a041fbcbb, type: 2}
+  - {fileID: 11400000, guid: f6c65af15aa1c924e811673113480d01, type: 2}
+  cardPool:
+  - {fileID: 11400000, guid: 80d639159b02532468d38bd843e4680d, type: 2}
+  - {fileID: 11400000, guid: 5ceaf79c9b24fb84baaa77b54184d6ab, type: 2}
+  - {fileID: 11400000, guid: 92714fb7bba6f9f4d9fd80f9b9caec68, type: 2}
+  - {fileID: 11400000, guid: ef0d42c11ff68f54f858e10895f1da16, type: 2}
+  - {fileID: 11400000, guid: ca4d948e5f708154a825c10a10189684, type: 2}
+  - {fileID: 11400000, guid: b8c97ab150b99294085096eb499ff96e, type: 2}
