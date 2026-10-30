@@ -123,6 +123,7 @@ public class GameManager : MonoSingleton<GameManager>
         {
             string log = aiController.TakeAction(shareSpawner.Shares, cardManager.aiCards);
             Debug.Log($"AI action {i + 1}/{config.actionsPerRound}: {log}");
+            ActivityLogManager.Instance.AddLog($"AI action {i + 1}/{config.actionsPerRound}: {log}");
         }
 
         yield return new WaitForSeconds(5f);
@@ -217,6 +218,7 @@ public class GameManager : MonoSingleton<GameManager>
 
             shareSpawner.SetPrice(i, newPrice);
             Debug.Log($"{name}: Rs. {oldPrice} -> Rs. {newPrice} (net {net}{(frozen ? ", FROZEN" : "")})");
+            ActivityLogManager.Instance.AddLog($"{name}: Rs. {oldPrice} -> Rs. {newPrice} (net {net}{(frozen ? ", FROZEN" : "")})");
         }
     }
 
@@ -230,6 +232,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         UIManager.Instance.UpdatePlayerPortfolio(PlayerPortfolio, shareSpawner.Shares);
         Debug.Log($"Round {currentRound} settled. Player net worth: Rs. {NetWorth(PlayerPortfolio)} | AI net worth: Rs. {NetWorth(AIPortfolio)}");
+        ActivityLogManager.Instance.AddLog($"Round {currentRound} settled. Player net worth: Rs. {NetWorth(PlayerPortfolio)} | AI net worth: Rs. {NetWorth(AIPortfolio)}");
 
         yield return new WaitForSeconds(5f);
 
